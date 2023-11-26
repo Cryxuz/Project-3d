@@ -12,7 +12,7 @@ import { useState } from 'react'
 </div> */}
 
 const Home = () => {
-
+  const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false)
 
   const adjustIslandForScreenSize = () => {
@@ -58,13 +58,15 @@ const Home = () => {
             <hemisphereLight />
             
             <Balloon />
-            <Sky />
+            <Sky 
+              isRotating={isRotating} />
             <Island 
               position={islandPosition}
               scale={islandScale}
               rotation={islandRotation}
               isRotating={isRotating}
-              setIsRotating={setIsRotating} />
+              setIsRotating={setIsRotating}
+              setCurrentStage={setCurrentStage} />
             <Plane 
               isRotating={isRotating}
               planeScale={planeScale}

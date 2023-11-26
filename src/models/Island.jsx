@@ -12,9 +12,15 @@ import {useFrame, useThree} from '@react-three/fiber'
 import { useGLTF } from "@react-three/drei";
 import islandScene from '../assets/3d/island.glb'
 import {a} from '@react-spring/three'
-
+import PropTypes from 'prop-types';
 
 const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
+  Island.propTypes = {
+    isRotating: PropTypes.any, 
+    setIsRotating: PropTypes.func.isRequired,
+    setCurrentStage: PropTypes.func.isRequired,
+  };
+
   const { nodes, materials } = useGLTF(islandScene);
   const islandRef = useRef()
   const {gl, viewport} = useThree()
@@ -23,20 +29,20 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const dampingFactor = 0.95
 
   const handlePointerDown = (e) => {
-    e.stopProgation()
+    e.stopPropagation()
     e.preventDefault()
     setIsRotating(true)
     const clientX = e.touches ? e.touches[0].clientX : e.clientX
     lastX.current = clientX
   }
   const handlePointerUp = (e) => {
-    e.stopProgation()
+    e.stopPropagation()
     e.preventDefault()
     setIsRotating(false)
   }
 
   const handlePointerMove = (e) => {
-    e.stopProgation()
+    e.stopPropagation()
     e.preventDefault()
 
     if(isRotating) {
@@ -52,6 +58,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     if(e.key === 'ArrowLeft') {
       if(!isRotating) setIsRotating(true)
       islandRef.current.rotation.y += 0.01 * Math.PI
+    
     } else if (e.key === 'ArrowRight') {
       if(!isRotating) setIsRotating(true)
       islandRef.current.rotation.y -= 0.01 * Math.PI
@@ -71,24 +78,10 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       if(Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0
       }
+      islandRef.current.rotation.y += rotationSpeed.current
     } else {
       const rotation = islandRef.current.rotation.y
-            /**
-       * Normalize the rotation value to ensure it stays within the range [0, 2 * Math.PI].
-       * The goal is to ensure that the rotation value remains within a specific range to
-       * prevent potential issues with very large or negative rotation values.
-       *  Here's a step-by-step explanation of what this code does:
-       *  1. rotation % (2 * Math.PI) calculates the remainder of the rotation value when divided
-       *     by 2 * Math.PI. This essentially wraps the rotation value around once it reaches a
-       *     full circle (360 degrees) so that it stays within the range of 0 to 2 * Math.PI.
-       *  2. (rotation % (2 * Math.PI)) + 2 * Math.PI adds 2 * Math.PI to the result from step 1.
-       *     This is done to ensure that the value remains positive and within the range of
-       *     0 to 2 * Math.PI even if it was negative after the modulo operation in step 1.
-       *  3. Finally, ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI) applies another
-       *     modulo operation to the value obtained in step 2. This step guarantees that the value
-       *     always stays within the range of 0 to 2 * Math.PI, which is equivalent to a full
-       *     circle in radians.
-       */
+     
         const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
         
@@ -116,16 +109,17 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     canvas.addEventListener('pointerdown', handlePointerDown)
     canvas.addEventListener('pointerup', handlePointerUp)
     canvas.addEventListener('pointermove', handlePointerMove)
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('keyup', handleKeyUp)
+    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('keyup', handleKeyUp)
+
     return () => {
-      canvas.addEventListener('pointerdown', handlePointerDown)
-      canvas.addEventListener('pointerup', handlePointerUp)
-      canvas.addEventListener('pointermove', handlePointerMove)
-      document.addEventListener('keydown', handleKeyDown)
-      document.addEventListener('keyup', handleKeyUp)
+      canvas.removeEventListener('pointerdown', handlePointerDown)
+      canvas.removeEventListener('pointerup', handlePointerUp)
+      canvas.removeEventListener('pointermove', handlePointerMove)
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('keyup', handleKeyUp)
     }
-  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
+  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove,])
   return (
     <a.group ref={islandRef} {...props} dispose={null}>
       <mesh
