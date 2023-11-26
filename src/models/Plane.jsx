@@ -5,19 +5,19 @@ import {useAnimations, useGLTF} from '@react-three/drei'
 const Plane = ({isRotating, ...props}) => {
   const ref = useRef()
   const {scene, animations} = useGLTF(planeScene)
-  const {actions} = useAnimations(animations, ref)
+  const {mixer} = useAnimations(animations, ref)
 
   useEffect(() => {
-    console.log('Animations:', animations);
-    if (isRotating && actions['Take 001']) {
-      actions['Take 001'].play();
-    } else if (actions['Take 001']) {
-      actions['Take 001'].stop();
-    }
-  }, [actions, isRotating]);
+    const clips = animations.map((clip) => mixer.clipAction(clip));
+    clips.forEach((clip) => clip.play());
+  
+    return () => {
+      clips.forEach((clip) => clip.stop());
+    };
+  }, [animations, mixer]);
 
   return (
-    <mesh position={[-5,-1,0]} scale={[0.01, 0.01, 0.01]} {...props} ref={ref}>
+    <mesh position={[-4.5, -1, 0.0]} scale={[0.012, 0.012, 0.012]} {...props} ref={ref}>
       <primitive object={scene} />
     </mesh>
   )
