@@ -10,12 +10,12 @@ Title: Beach island
 import {useRef, useEffect} from 'react'
 import {useFrame, useThree} from '@react-three/fiber'
 import { useGLTF } from "@react-three/drei";
-import islandScene from '../assets/3d/island/glb'
+import islandScene from '../assets/3d/island.glb'
 import {a} from '@react-spring/three'
 
 
 const Island = (props) => {
-  const { nodes, materials } = useGLTF("/beach_island.glb");
+  const { nodes, materials } = useGLTF(islandScene);
   const islandRef = useRef()
   return (
     <a.group ref={islandRef} {...props} dispose={null}>
@@ -7770,6 +7770,6 @@ const Island = (props) => {
   );
 }
 
-useGLTF.preload("/beach_island.glb");
+useGLTF.preload(islandScene);
 
 export default Island
