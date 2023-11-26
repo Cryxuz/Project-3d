@@ -33,12 +33,31 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
     e.stopProgation()
     e.preventDefault()
     setIsRotating(false)
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    const delta = (clientX - lastX.current) / viewport.width
+    islandRef.current.rotation.y += delta * 0.01 * Math.PI
+    lastX.current = clientX
+    rotationSpeed.current = delta * 0.01 * Math.PI
   }
   const handlePointerMove = (e) => {
     e.stopProgation()
     e.preventDefault()
+
+    if(isRotating) {
+      handlePointerUp(e)
+    }
   }
 
+  useEffect(() => {
+    document.addEventListener('pointerdown', handlePointerDown)
+    document.addEventListener('pointerup', handlePointerUp)
+    document.addEventListener('pointermove', handlePointerMove)
+    return () => {
+      document.addEventListener('pointerdown', handlePointerDown)
+      document.addEventListener('pointerup', handlePointerUp)
+      document.addEventListener('pointermove', handlePointerMove)
+    }
+  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
   return (
     <a.group ref={islandRef} {...props} dispose={null}>
       <mesh

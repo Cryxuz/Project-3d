@@ -4,7 +4,7 @@ import {useGLTF} from '@react-three/drei'
 const Plane = ({isRotating, ...props}) => {
   const {scene, animation} = useGLTF(planeScene)
   return (
-    <mesh {...props}>
+    <mesh scale={0.04, 0.04, 0.003} {...props}>
       <primitive object={scene} />
     </mesh>
   )
