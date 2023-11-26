@@ -17,9 +17,11 @@ const Plane = ({isRotating, ...props}) => {
   }, [animations, mixer]);
 
   return (
-    <mesh position={[-4.5, -1, 0.0]} scale={[0.012, 0.012, 0.012]} {...props} ref={ref}>
-      <primitive object={scene} />
-    </mesh>
+    <mesh  position={[4.7, -1, 0.0]} scale={[0.012, 0.012, 0.012]} {...props} ref={ref}>
+        <primitive rotation={[0, 4, 0]} object={scene} />
+      
+  </mesh>
+  
   )
 }
 

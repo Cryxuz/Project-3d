@@ -20,10 +20,10 @@ const Bird = () => {
     birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;
 
     // Check if the bird reached a certain endpoint relative to the camera
-    if (birdRef.current.position.x > camera.position.x + 10) {
+    if (birdRef.current.position.x > camera.position.x + 5) {
       // Change direction to backward and rotate the bird 180 degrees on the y-axis
       birdRef.current.rotation.y = Math.PI;
-    } else if (birdRef.current.position.x < camera.position.x - 10) {
+    } else if (birdRef.current.position.x < camera.position.x - 5) {
       // Change direction to forward and reset the bird's rotation
       birdRef.current.rotation.y = 0;
     }

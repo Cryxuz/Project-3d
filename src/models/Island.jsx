@@ -123,8 +123,8 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
 
   return (
     <a.group ref={islandRef} {...props} dispose={null} scale={[1,1,1]} position={[0,0,-1]}>
-      <group rotation={[Math.PI / 2, 0, -Math.PI]} scale={0.371}>
-        <group rotation={[-Math.PI, 0, 0]} scale={0.01}>
+      <group rotation={[Math.PI / 2, 0, -Math.PI]} scale={0.391}>
+        <group rotation={[-Math.PI, 0, 4.5]} scale={0.01}>
           <group rotation={[0, 0, -Math.PI / 2]} scale={100}>
             <mesh
               castShadow
