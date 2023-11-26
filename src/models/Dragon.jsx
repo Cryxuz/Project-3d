@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
-import planeScene from '../assets/3d/plane.glb'
+import dragonScene from '../assets/3d/dragon.glb'
 import {useAnimations, useGLTF} from '@react-three/drei'
 
-const Plane = ({isRotating, ...props}) => {
+const Dragon = ({isRotating, ...props}) => {
   const ref = useRef()
-  const {scene, animations} = useGLTF(planeScene)
+  const {scene, animations} = useGLTF(dragonScene)
   const {mixer} = useAnimations(animations, ref)
 
   useEffect(() => {
@@ -25,4 +25,4 @@ const Plane = ({isRotating, ...props}) => {
   )
 }
 
-export default Plane
+export default Dragon

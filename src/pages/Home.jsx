@@ -3,9 +3,9 @@ import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
 import Sky from '../models/Sky'
-import Plane from '../models/Plane'
 import { useState } from 'react'
 import Bird from '../models/Bird'
+import Dragon from '../models/Dragon'
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         POPUP
@@ -28,7 +28,7 @@ const Home = () => {
       }
       return [screenScale, screenPosition, rotation]
     }
-    const adjustPlaneForScreenSize = () => {
+    const adjustDragonForScreenSize = () => {
 
       let screenScale, screenPosition
       // let rotation = [0.1, 4.7, 0]
@@ -44,7 +44,7 @@ const Home = () => {
         return [screenScale, screenPosition]
       }
 
-  const [planeScale, planePosition] = adjustPlaneForScreenSize()
+  const [dragonScale, dragonPosition] = adjustDragonForScreenSize()
   const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize()
   return (
     <section className="w-full h-screen relative">
@@ -57,10 +57,10 @@ const Home = () => {
           <pointLight />
           <hemisphereLight />
             
-            <Plane 
+            <Dragon 
               isRotating={isRotating}
-              planeScale={planeScale}
-              planePosition={planePosition}
+              dragonScale={dragonScale}
+              dragonPosition={dragonPosition}
               rotation={[0, 20, 0]}/>
             <Sky 
               isRotating={isRotating} />
