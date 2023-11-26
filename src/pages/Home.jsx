@@ -3,9 +3,9 @@ import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
 import Sky from '../models/Sky'
-import Balloon from '../models/Balloon'
 import Plane from '../models/Plane'
 import { useState } from 'react'
+import Bird from '../models/Bird'
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         POPUP
@@ -57,7 +57,11 @@ const Home = () => {
             <pointLight />
             <hemisphereLight />
             
-            <Balloon />
+            <Plane 
+              isRotating={isRotating}
+              planeScale={planeScale}
+              planePosition={planePosition}
+              rotation={[0, 20, 0]}/>
             <Sky 
               isRotating={isRotating} />
             <Island 
@@ -67,11 +71,7 @@ const Home = () => {
               isRotating={isRotating}
               setIsRotating={setIsRotating}
               setCurrentStage={setCurrentStage} />
-            <Plane 
-              isRotating={isRotating}
-              planeScale={planeScale}
-              planePosition={planePosition}
-              rotation={[0, 20, 0]}/>
+            <Bird />
           </Suspense>
       </Canvas>
     </section>
