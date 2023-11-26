@@ -2,6 +2,9 @@ import { Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Island from '../models/Island'
+import Sky from '../models/Sky'
+import Balloon from '../models/Balloon'
+import Plane from '../models/Plane'
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         POPUP
@@ -10,7 +13,7 @@ import Island from '../models/Island'
 const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale = null 
-    let screenPosition = [0, -6.5, -25]
+    let screenPosition = [0, -5.5, -23]
     let rotation = [0.1, 4.7, 0]
 
 
@@ -33,11 +36,14 @@ const Home = () => {
             <ambientLight />
             <pointLight />
             <hemisphereLight />
-
+            
+            <Balloon />
+            <Sky />
             <Island 
             position={islandPosition}
             scale={islandScale}
             rotation={islandRotation} />
+            <Plane />
           </Suspense>
       </Canvas>
     </section>
