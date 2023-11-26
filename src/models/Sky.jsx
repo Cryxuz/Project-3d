@@ -5,18 +5,24 @@ import {useFrame} from '@react-three/fiber'
 
 // eslint-disable-next-line react/prop-types
 const Sky = ({isRotating}) => {
-  const sky = useGLTF(skyScene)
+  const {nodes, materials} = useGLTF(skyScene)
   const skyRef = useRef()
 
   useFrame((_, delta) => {
     if(isRotating) {
-      skyRef.current.rotation.y += 0.25 * delta
+      skyRef.current.rotation.y += 0.15 * delta
     }
   })
 
   return (
     <mesh ref={skyRef}>
-      <primitive object={sky.scene} scale={[1, 1, -1]} position={[1, -50, 1]}/>
+       <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.pack1_Background_0.geometry}
+        material={materials.Background}
+        scale={[3,3,-5]}
+      />
     </mesh>
   )
 }

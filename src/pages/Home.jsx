@@ -17,7 +17,7 @@ const Home = () => {
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null 
-    let screenPosition = [0, -5.5, -20]
+    let screenPosition = [0, -10, -25]
     let rotation = [0.1, 4.7, 0]
 
 
@@ -49,13 +49,13 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <Canvas 
-        className={`w=full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} 
+        className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} 
         camera={{ near: 0.1, far:1000 }}>
           <Suspense fallback={ <Loader />}>
-            <directionalLight />
-            <ambientLight />
-            <pointLight />
-            <hemisphereLight />
+          <ambientLight />
+          <directionalLight />
+          <pointLight />
+          <hemisphereLight />
             
             <Plane 
               isRotating={isRotating}
