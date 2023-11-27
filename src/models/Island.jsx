@@ -122,63 +122,229 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   }, [gl, handlePointerDown, handlePointerUp, handlePointerMove,])
 
   return (
-    <a.group ref={islandRef} {...props} dispose={null} scale={[1,1,1]} position={[0,0,-1]}>
-      <group rotation={[Math.PI / 2, 0, -Math.PI]} scale={0.391}>
-        <group rotation={[-Math.PI, 0, 4.5]} scale={0.01}>
-          <group rotation={[0, 0, -Math.PI / 2]} scale={100}>
-            <mesh
-              castShadow
-              receiveShadow
-              geometry={nodes.foliage_baked_flowers_0.geometry}
-              material={materials.baked_flowers}
-            />
-            <mesh
-              castShadow
-              receiveShadow
-              geometry={nodes.foliage_baked_flowers_0_1.geometry}
-              material={materials.baked_flowers}
-            />
-          </group>
-          <group rotation={[0, 0, -Math.PI / 2]} scale={100}>
-            <mesh
-              castShadow
-              receiveShadow
-              geometry={nodes.ropes_baked_rope_0.geometry}
-              material={materials.baked_rope}
-            />
-            <mesh
-              castShadow
-              receiveShadow
-              geometry={nodes.ropes_baked_rope_0_1.geometry}
-              material={materials.baked_rope}
-            />
-          </group>
+    <a.group ref={islandRef} {...props} dispose={null} scale={[0.02, 0.02,0.02]} position={[0, -1.75,-1]}>
+      <group
+        position={[-44.516, 45.46, 10.285]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      >
+        <group position={[0, 0, -34.814]}>
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.oreada_baked_oreada_0.geometry}
-            material={materials.baked_oreada}
-            rotation={[0, 0, -Math.PI / 2]}
-            scale={100}
+            geometry={nodes.tower_base_wall_0.geometry}
+            material={materials.wall}
           />
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes.tree_baked_tree_0.geometry}
-            material={materials.baked_tree}
-            rotation={[0, 0, -Math.PI / 2]}
-            scale={100}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.rocks_baked_rocks_0.geometry}
-            material={materials.baked_rocks}
-            rotation={[0, 0, -Math.PI / 2]}
-            scale={100}
+            geometry={nodes.tower_base_planks_0.geometry}
+            material={materials.planks}
           />
         </group>
       </group>
+      <group position={[-22.341, 70.746, -26.347]} rotation={[0, 0.667, 0]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.house_base_wall_0.geometry}
+          material={materials.wall}
+          position={[-4.244, 0, -22.805]}
+        />
+      </group>
+      <group position={[-19.572, 3.067, 56.714]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.roof_roof_0.geometry}
+          material={materials.roof}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.roof_wooden_skel_no_op_0.geometry}
+          material={materials.wooden_skel_no_op}
+        />
+      </group>
+      <group
+        position={[-62.013, 69.642, 4.806]}
+        rotation={[-2.987, -1.271, -2.962]}
+        scale={0.557}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.stone_details_wall_0.geometry}
+          material={materials.wall}
+          position={[0, 0, -9.758]}
+        />
+      </group>
+      <group
+        position={[-60.621, 71.68, -29.659]}
+        rotation={[2.675, -0.9, 2.732]}
+        scale={0.295}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.wood_loose_planks_wooden_skel_no_op_0.geometry}
+          material={materials.wooden_skel_no_op}
+          position={[167.603, 70.907, -5.194]}
+        />
+      </group>
+      <group
+        position={[65.223, 90.387, -43.067]}
+        rotation={[-1.861, 0.588, 1.284]}
+        scale={0.611}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.leaves_op_branches_0.geometry}
+          material={materials.op_branches}
+          position={[-2.491, -18.554, -1.982]}
+        />
+      </group>
+      <group
+        position={[45.452, 50.763, -23.448]}
+        rotation={[2.684, 0.646, -2.739]}
+        scale={0.233}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.grass_op_branches_0.geometry}
+          material={materials.op_branches}
+          position={[-0.562, 11.093, 0]}
+        />
+      </group>
+      <group
+        position={[36.662, 0.659, 17.226]}
+        rotation={[0.107, 1.046, -0.139]}
+        scale={[1.221, 1.208, 1]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["rocks_Material_#413_0"].geometry}
+          material={materials.Material_413}
+          position={[-100.304, -21.28, -15.81]}
+        />
+      </group>
+      <group
+        position={[46.878, 46.628, 8.397]}
+        rotation={[-0.002, 0.334, -0.09]}
+        scale={0.799}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["ferns_Material_#650_0"].geometry}
+          material={materials.Material_650}
+          position={[-13.284, 9.049, 0]}
+        />
+      </group>
+      <group
+        position={[-8.336, 32.703, -8.657]}
+        rotation={[-0.04, -0.953, -0.058]}
+        scale={0.736}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.wood_structure_wooden_skel_no_op_0.geometry}
+          material={materials.wooden_skel_no_op}
+          position={[77.142, -2.511, -9.584]}
+        />
+      </group>
+      <group
+        position={[15.005, 38.223, -26.353]}
+        rotation={[-Math.PI / 2, 0, 1.904]}
+        scale={[0.049, 0.049, 0.159]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["barrels_door_+_barrels_0"].geometry}
+          material={materials.door__barrels}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.barrels_planks_0.geometry}
+          material={materials.planks}
+        />
+      </group>
+      <group
+        position={[-1.063, 56.917, -47.881]}
+        rotation={[0, -1.281, 0]}
+        scale={[0.398, 0.155, 0.603]}
+      >
+        <group position={[77.142, -2.511, -9.584]}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.windows_wooden_skel_no_op_0.geometry}
+            material={materials.wooden_skel_no_op}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes["windows_door_+_barrels_0"].geometry}
+            material={materials.door__barrels}
+          />
+        </group>
+      </group>
+      <group
+        position={[18.805, -42.02, 19.523]}
+        rotation={[1.559, 0.008, -0.351]}
+        scale={0.474}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.wood_beams_wooden_skel_no_op_0.geometry}
+          material={materials.wooden_skel_no_op}
+          position={[-186.901, 79.687, -8.777]}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.base_tower_wall_0.geometry}
+        material={materials.wall}
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.tree_trunk_bark_0.geometry}
+        material={materials.bark}
+        position={[47.887, 83.803, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.grass_floor_grass_0.geometry}
+        material={materials.grass}
+        rotation={[-Math.PI / 2, 0, 1.328]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["door_door_+_barrels_0"].geometry}
+        material={materials.door__barrels}
+        position={[-11.427, 60.918, -3.194]}
+        rotation={[0, 0.773, 0]}
+        scale={[0.84, 1, 1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["klimop_Material_#650_0"].geometry}
+        material={materials.Material_650}
+        position={[-54.458, 38.769, -13.438]}
+        rotation={[-Math.PI / 2, 0, 0]}
+      />
     </a.group>
   );
 }
