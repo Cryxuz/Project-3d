@@ -18,7 +18,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className='info-box'>
         <p className='font-medium sm:text-xl text-center'>
-          Graduated from Dev Academy<br /> and picked up many skills along the way.
+          I graduated from Dev Academy Aotearoa<br /> and picked up many skills along the way.
         </p>
 
         <Link to='/about' className='neo-brutalism-white neo-btn'>
@@ -33,7 +33,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className='info-box'>
         <p className='font-medium text-center sm:text-xl'>
-          Actively engaged in building diverse projects and
+          Actively engaging in building diverse projects and
           <br /> 
           expanding my proficiency in programming languages.
         </p>
