@@ -18,7 +18,7 @@ const Bluebird = ({ isRotating, ...props }) => {
   }, [animations, mixer]);
 
   return (
-    <mesh position={[3, 1.1, 0]} scale={[0.2, 0.2, 0.2]} {...props} ref={ref}>
+    <mesh position={[2.3, 0.9, 0]} scale={[0.2, 0.2, 0.2]} {...props} ref={ref}>
       <primitive rotation={[0, 4, 0]} object={scene} />
     </mesh>
   );
