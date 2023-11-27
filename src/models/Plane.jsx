@@ -22,7 +22,7 @@ export function Plane({ isRotating, ...props }) {
   }, [actions, isRotating]);
 
   return (
-    <mesh position={[-1,-1,2]} {...props} ref={ref}>
+    <mesh position={[-1,-0.75,2]} {...props} ref={ref}>
       <primitive object={scene} />
     </mesh>
   );
