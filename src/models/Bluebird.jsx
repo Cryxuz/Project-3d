@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import dragonScene from '../assets/3d/dragon.glb';
+import bluebirdScene from '../assets/3d/bluebird.glb';
 import { useAnimations, useGLTF } from '@react-three/drei';
 
-const Dragon = ({ isRotating, ...props }) => {
+const Bluebird = ({ isRotating, ...props }) => {
   const ref = useRef();
-  const { scene, animations } = useGLTF(dragonScene);
+  const { scene, animations } = useGLTF(bluebirdScene);
   const { mixer } = useAnimations(animations, ref);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const Dragon = ({ isRotating, ...props }) => {
   }, [animations, mixer]);
 
   return (
-    <mesh position={[2, 0.5, 0.0]} scale={[0.2, 0.2, 0.2]} {...props} ref={ref}>
+    <mesh position={[3, 1.1, 0]} scale={[0.2, 0.2, 0.2]} {...props} ref={ref}>
       <primitive rotation={[0, 4, 0]} object={scene} />
     </mesh>
   );
 };
 
-export default Dragon;
+export default Bluebird;

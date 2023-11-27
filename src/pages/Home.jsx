@@ -5,7 +5,10 @@ import Island from '../models/Island'
 import Sky from '../models/Sky'
 import { useState } from 'react'
 import Bird from '../models/Bird'
-import Dragon from '../models/Dragon'
+import Bluebird from '../models/Bluebird'
+import Balloon from '../models/Balloon'
+import Plane from '../models/Plane'
+
 
 {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         POPUP
@@ -28,7 +31,7 @@ const Home = () => {
       }
       return [screenScale, screenPosition, rotation]
     }
-    const adjustDragonForScreenSize = () => {
+    const adjustBluebirdForScreenSize = () => {
 
       let screenScale, screenPosition
       // let rotation = [0.1, 4.7, 0]
@@ -44,7 +47,7 @@ const Home = () => {
         return [screenScale, screenPosition]
       }
 
-  const [dragonScale, dragonPosition] = adjustDragonForScreenSize()
+  const [bluebirdScale, bluebirdPosition] = adjustBluebirdForScreenSize()
   const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize()
   return (
     <section className="w-full h-screen relative">
@@ -57,11 +60,13 @@ const Home = () => {
           <pointLight />
           <hemisphereLight />
             
-            <Dragon 
+            <Balloon />
+            <Bluebird 
               isRotating={isRotating}
-              dragonScale={dragonScale}
-              dragonPosition={dragonPosition}
+              bluebirdScale={bluebirdScale}
+              bluebirdPosition={bluebirdPosition}
               rotation={[0, 20, 0]}/>
+              
             <Sky 
               isRotating={isRotating} />
             <Island 
@@ -72,6 +77,12 @@ const Home = () => {
               setIsRotating={setIsRotating}
               setCurrentStage={setCurrentStage} />
             <Bird />
+            <Plane
+            isRotating={isRotating}
+            rotation={[0, 20.1, 0]}
+            
+          />
+      
           </Suspense>
       </Canvas>
     </section>

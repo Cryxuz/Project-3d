@@ -122,7 +122,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   }, [gl, handlePointerDown, handlePointerUp, handlePointerMove,])
 
   return (
-    <a.group ref={islandRef} {...props} dispose={null} scale={[0.02, 0.02,0.02]} position={[0, -1.75,-1]}>
+    <a.group ref={islandRef} {...props} dispose={null} scale={[0.03, 0.03,0.03]} position={[0, -1.75,-1]}>
       <group
         position={[-44.516, 45.46, 10.285]}
         rotation={[-Math.PI / 2, 0, 0]}
