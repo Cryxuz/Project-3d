@@ -58,7 +58,6 @@ const Home = () => {
           <directionalLight />
           <pointLight />
           <hemisphereLight />
-            
             <Balloon />
             <Bluebird 
               isRotating={isRotating}

@@ -50,7 +50,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className='info-box'>
       <p className='font-medium sm:text-xl text-center'>
-        Need a hard-working junior developer? <br/> I&apos;m just a few keystrokes away
+        Need a passionate junior developer? <br/> I&apos;m just a few keystrokes away
       </p>
 
       <Link to='/contact' className='neo-brutalism-white neo-btn'>
@@ -58,6 +58,7 @@ const HomeInfo = ({ currentStage }) => {
         <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
       </Link>
     </div>
+    
     );
   }
 
