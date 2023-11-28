@@ -150,12 +150,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Cryxuz',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/paul-david-tan-28b003266/',
     }
 ];
 
@@ -164,28 +164,32 @@ export const projects = [
     iconUrl: pawprint,
     theme: 'btn-back-red',
     name: 'Tailored Tails',
-    description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, NodeJS) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
-    link: 'https://github.com/adrianhajdin/pricewise',
+    description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, Node) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
+    link: 'https://tailored-tails.onrender.com/',
+    github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack'
 },
 {
   iconUrl: burger,
   theme: 'btn-back-black',
-  name: 'Amazon Price Tracker',
-  description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-  link: 'https://github.com/adrianhajdin/pricewise',
+  name: 'Burger Dash',
+  description: 'This website is built using SERN (SQLite, Express, React, Node) stack, it is more focused on saving the data to the database, we used carousel on the front-end with react-responsive-carousel and deployed at Netlify.',
+  link: 'https://github.com/Cryxuz/Project-burger-dash',
+  github_link: 'https://burgerdash.netlify.app/'
 },
 {
   iconUrl: donut,
   theme: 'btn-back-blue',
-  name: 'Amazon Price Tracker',
-  description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-  link: 'https://github.com/adrianhajdin/pricewise',
+  name: "Tiff's Donuts",
+  description: 'Final group project at Dev Academy, this project is more focused on learning how to use Three.js.',
+  link: 'https://tiffs-donuts.devacademy.nz/',
+  github_link: 'https://github.com/Cryxuz/Dev-Academy-Final-Project'
 },
 {
   iconUrl: contract,
   theme: 'btn-back-green',
-  name: 'Amazon Price Tracker',
-  description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
+  name: 'To-do List',
+  description: 'A small to-do list personal project in Dev Academy.',
   link: 'https://github.com/adrianhajdin/pricewise',
+  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list'
 },
 ];
