@@ -16,12 +16,15 @@ const About = () => {
         <h3 className="subhead-text">My Skills</h3>
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div key={skill.name} className='block-container w-20 h-20'>
+            <div key={skill.name} className='text-center'>
+            <div className='block-container w-20 h-20'>
               <div className='btn-back rounded-xl' />
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img src={skill.imageUrl} alt="skill.name" className='w-1/2 h-1/2 object-contain' />
               </div> 
             </div>
+            <p className='pt-4'>{skill.name}</p>
+            </div>     
             ))}
         </div>
       </div>
@@ -29,13 +32,14 @@ const About = () => {
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>I&apos;ve studied in Dev Academy Aotearoa, leveling up my technical skills. I&apos;ve also worked in various establishments such as Distinction Hotel, Kinloch Manor & Villas, and Lakeland Queen Cruise. Here&apos;s the rundown:</p>  
+          <p>I&apos;ve attended Dev Academy Aotearoa 15-week bootcamp, leveling up my technical and human skills. I&apos;ve also worked in various establishments such as Distinction Hotel, Kinloch Manor & Villas, and Lakeland Queen Cruise. Here&apos;s the rundown:</p>  
         </div>
         <div className='mt-12 flex'>
           <VerticalTimeline>
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
               key={experience.company_name}
+              company_name={experience.company_name}
               date={experience.date}
               icon={<div className='flex justify-center items-center w-full h-full'>
                 <img 
@@ -55,7 +59,7 @@ const About = () => {
                     {experience.title}
                   </h3>
                   <p className='text-black-500 font-medium font-base' style={{margin:0}}>
-                    {experience.name}
+                    {experience.company_name}
                   </p>
                 </div>
                 <ul className='my-5 list-disc ml-5 space-y-2'>
