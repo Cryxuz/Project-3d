@@ -119,7 +119,7 @@ const Contact = () => {
         </form>
         <div className="flex items-center justify-center gap-12 mt-12">
         {socialLinks.map((link) => (
-            <Link key={link.name} to={link.link}><img target="_blank" src={link.iconUrl} alt="" /></Link>
+            <Link target='_blank' key={link.name} to={link.link}><img  src={link.iconUrl} alt="" /></Link>
         ))}
         </div>
         
