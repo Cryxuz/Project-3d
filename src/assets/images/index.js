@@ -4,6 +4,10 @@ import shopify from './shopify.png'
 import starbucks from './starbucks.png'
 import tesla from './tesla.png'
 import logo from './logo.svg'
+import dev from './dev.png'
+import distinction from './distinction.png'
+import kinloch from './kinloch.png'
+import cruise from './cruise.png'
 
 export {
     hero,
@@ -11,5 +15,9 @@ export {
     shopify,
     starbucks,
     tesla,
-    logo
+    logo,
+    dev,
+    distinction,
+    kinloch,
+    cruise,
 }

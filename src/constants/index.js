@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks } from "../assets/images";
+import { dev, distinction, kinloch, cruise } from "../assets/images";
 import {
     contact,
     css,
@@ -14,6 +14,7 @@ import {
     react,
     tailwindcss,
     typescript,
+
     // projects
     car,
     pricewise,
@@ -90,7 +91,7 @@ export const experiences = [
     {
         title: "React.js Developer",
         company_name: "Starbucks",
-        icon: starbucks,
+        icon: dev,
         iconBg: "#accbe1",
         date: "March 2020 - April 2021",
         points: [
@@ -103,7 +104,7 @@ export const experiences = [
     {
         title: "Web Developer",
         company_name: "Shopify",
-        icon: shopify,
+        icon: distinction,
         iconBg: "#b7e4c7",
         date: "Jan 2022 - Jan 2023",
         points: [
@@ -116,7 +117,7 @@ export const experiences = [
     {
         title: "Full stack Developer",
         company_name: "Meta",
-        icon: meta,
+        icon: kinloch,
         iconBg: "#a2d2ff",
         date: "Jan 2023 - Present",
         points: [
@@ -126,6 +127,19 @@ export const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+    {
+      title: "Full stack Developer",
+      company_name: "Meta",
+      icon: cruise,
+      iconBg: "#a2d2ff",
+      date: "Jan 2023 - Present",
+      points: [
+          "Developing and maintaining web applications using React.js and other related technologies.",
+          "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+          "Implementing responsive design and ensuring cross-browser compatibility.",
+          "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+  },
 ];
 
 export const socialLinks = [
