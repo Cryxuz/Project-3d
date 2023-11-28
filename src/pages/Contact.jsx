@@ -5,6 +5,8 @@ import Fox from '../models/Fox'
 import Loader from '../components/Loader'
 import useAlert from "../hooks/useAlert"
 import Alert from "../components/Alert"
+import { Link } from "react-router-dom"
+import {socialLinks} from '../constants'
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -53,7 +55,7 @@ const Contact = () => {
   }
  
   return (
-    <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
+    <section className="relative flex lg:flex-row flex-col max-container h-[100%]">
       {alert.show && <Alert{...alert} />}
       
       <div className="flex-1 min-w-[50%] flex flex-col">
@@ -115,6 +117,12 @@ const Contact = () => {
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
+        <div className="flex items-center justify-center gap-12 mt-12">
+        {socialLinks.map((link) => (
+            <Link key={link.name} to={link.link}><img target="_blank" src={link.iconUrl} alt="" /></Link>
+        ))}
+        </div>
+        
       </div>
       <div className="lg:w1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
         <Canvas

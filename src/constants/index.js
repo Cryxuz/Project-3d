@@ -1,6 +1,5 @@
 import { dev, distinction, kinloch, cruise } from "../assets/images";
 import {
-    contact,
     css,
     express,
     git,
@@ -20,6 +19,7 @@ import {
     donut,
     pawprint,
     contract,
+   
 
 } from "../assets/icons";
 
@@ -142,11 +142,6 @@ export const experiences = [
 ];
 
 export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
     {
         name: 'GitHub',
         iconUrl: github,
