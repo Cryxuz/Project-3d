@@ -26,6 +26,7 @@ const Projects = () => {
             <div className='mt-5 flex flex-col'>
               <h4 className='text-2xl font-poppins font-semibold'>
                 {project.name}
+              </h4>
                 <p className='mt-2 text-slate-500'>
                   {project.description}
                 </p>
@@ -60,7 +61,7 @@ const Projects = () => {
                   />
                 </div>
                 
-              </h4>
+              
             </div>
           </div>
         ))}
