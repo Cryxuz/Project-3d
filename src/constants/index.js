@@ -14,6 +14,7 @@ import {
     tailwindcss,
     typescript,
     sql,
+    p,
     // projects
     burger,
     donut,
@@ -160,13 +161,21 @@ export const socialLinks = [
 ];
 
 export const projects = [
-  {
-    iconUrl: pawprint,
-    theme: 'btn-back-red',
-    name: 'Tailored Tails',
-    description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, Node) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
-    link: 'https://tailored-tails.onrender.com/',
-    github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack'
+{
+  iconUrl: p,
+  theme: 'btn-back-green',
+  name: 'Personal Website',
+  description: 'Personal 3D website built with MERN (MongoDB, Express, React, Node) stack and Three.js. Showcasing my projects and providing a brief introduction about me.',
+  link: 'https://paul-tan.com/',
+  github_link: 'https://github.com/Cryxuz/Project-3d'
+},
+{
+  iconUrl: pawprint,
+  theme: 'btn-back-red',
+  name: 'Tailored Tails',
+  description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, Node) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
+  link: 'https://tailored-tails.onrender.com/',
+  github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack'
 },
 {
   iconUrl: burger,
