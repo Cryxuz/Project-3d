@@ -13,7 +13,7 @@ import {
     react,
     tailwindcss,
     typescript,
-
+    sql,
     // projects
     burger,
     donut,
@@ -59,6 +59,11 @@ export const skills = [
         name: "MongoDB",
         type: "Database",
     },
+    {
+      imageUrl: sql,
+      name: "SQLite",
+      type: "Database",
+  },
     {
         imageUrl: motion,
         name: "Motion",

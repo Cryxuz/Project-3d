@@ -11,6 +11,7 @@ const About = () => {
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>Software Developer based in New Zealand, specializing in hand-on learning & building applications</p>
       </div>
+      <button className='btn mt-6'>Download CV</button>
       {/* Skills */}
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>

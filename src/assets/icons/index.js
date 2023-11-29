@@ -28,8 +28,10 @@ import donut from './donut.png'
 import pawprint from './pawprint.png'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+import sql from './sql.png'
 
 export {
+    sql,
     burger,
     donut,
     pawprint,
