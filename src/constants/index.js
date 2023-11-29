@@ -168,8 +168,8 @@ export const projects = [
   theme: 'btn-back-black',
   name: 'Burger Dash',
   description: 'This website is built using SERN (SQLite, Express, React, Node) stack, it is more focused on saving the data to the database, we used carousel on the front-end with react-responsive-carousel and deployed at Netlify.',
-  link: 'https://github.com/Cryxuz/Project-burger-dash',
-  github_link: 'https://burgerdash.netlify.app/'
+  link: 'https://burgerdash.netlify.app/',
+  github_link: 'https://github.com/Cryxuz/Project-burger-dash'
 },
 {
   iconUrl: donut,
