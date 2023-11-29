@@ -30,9 +30,11 @@ import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import sql from './sql.png'
 import p from './p.png'
+import contract from './contract.png'
 
 export {
     p,
+    contract,
     sql,
     burger,
     donut,

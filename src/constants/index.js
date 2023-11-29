@@ -14,8 +14,10 @@ import {
     tailwindcss,
     typescript,
     sql,
-    p,
+    
     // projects
+    p,
+    contract,
     burger,
     donut,
     pawprint,
@@ -168,6 +170,14 @@ export const projects = [
   description: 'Personal 3D website using Three.js, showcasing my projects and providing a brief introduction about me.',
   link: 'https://paul-tan.com/',
   github_link: 'https://github.com/Cryxuz/Project-3d'
+},
+{
+  iconUrl: contract,
+  theme: 'btn-back-yellow',
+  name: "To-do List",
+  description: 'A simple To-do list project.',
+  link: 'http://paul-tan-to-do-list.devacademy.nz/',
+  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list'
 },
 {
   iconUrl: pawprint,
