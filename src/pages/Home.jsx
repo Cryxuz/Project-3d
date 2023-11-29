@@ -13,11 +13,11 @@ import { soundoff, soundon } from '../assets/icons'
 
 const Home = () => {
   const audioRef = useRef(new Audio(sakura))
-  audioRef.current.volue = 0.1
+  audioRef.current.volume = 0.4
   audioRef.current.loop = true
+  const [isPlayingMusic, setIsPlayingMusic] = useState(true)
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false)
-  const [isPlayingMusic, setIsPlayingMusic] = useState(false)
 
   useEffect(() => {
     if(isPlayingMusic) {
