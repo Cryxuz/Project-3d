@@ -25,7 +25,6 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import burger from './burger.png'
 import donut from './donut.png'
-import contract from './contract.png'
 import pawprint from './pawprint.png'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
@@ -33,7 +32,6 @@ import soundoff from './soundoff.png'
 export {
     burger,
     donut,
-    contract,
     pawprint,
     css,
     express,

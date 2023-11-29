@@ -18,7 +18,7 @@ import {
     burger,
     donut,
     pawprint,
-    contract,
+    
    
 
 } from "../assets/icons";
@@ -178,13 +178,5 @@ export const projects = [
   description: 'Final group project at Dev Academy, this project is more focused on learning how to use Three.js.',
   link: 'https://tiffs-donuts.devacademy.nz/',
   github_link: 'https://github.com/Cryxuz/Dev-Academy-Final-Project'
-},
-{
-  iconUrl: contract,
-  theme: 'btn-back-green',
-  name: 'To-do List',
-  description: 'A small to-do list personal project in Dev Academy.',
-  link: 'https://github.com/adrianhajdin/pricewise',
-  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list'
 },
 ];
