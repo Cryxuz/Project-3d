@@ -173,9 +173,9 @@ export const projects = [
 },
 {
   iconUrl: contract,
-  theme: 'btn-back-yellow',
+  theme: 'btn-back-pink',
   name: "To-do List",
-  description: 'A simple To-do list project.',
+  description: 'A simple To-do list project from dev academy.',
   link: 'http://paul-tan-to-do-list.devacademy.nz/',
   github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list'
 },
