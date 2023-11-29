@@ -100,7 +100,7 @@ export const experiences = [
         iconBg: "#accbe1",
         date: "June 2023 - October 2023",
         points: [
-            "Intense 15-week software development bootcamp.",
+            "Intense 15-week full immersion software development bootcamp that mimics a real-life development team as closely as possible.",
             "Developing web applications using SQLite, Express.js, React.js Node.js, Typescript, HTML5, CSS, and other related technologies.",
             "Collaborating with other developer students to create high-quality products and finish exercises.",
             "Implementing responsive design, authentication, authorization and security.",
@@ -165,7 +165,7 @@ export const projects = [
   iconUrl: p,
   theme: 'btn-back-green',
   name: 'Personal Website',
-  description: 'Personal 3D website built with MERN (MongoDB, Express, React, Node) stack and Three.js. Showcasing my projects and providing a brief introduction about me.',
+  description: 'Personal 3D website using Three.js, showcasing my projects and providing a brief introduction about me.',
   link: 'https://paul-tan.com/',
   github_link: 'https://github.com/Cryxuz/Project-3d'
 },

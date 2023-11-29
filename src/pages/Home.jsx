@@ -15,7 +15,7 @@ const Home = () => {
   const audioRef = useRef(new Audio(sakura))
   audioRef.current.volume = 0.4
   audioRef.current.loop = true
-  const [isPlayingMusic, setIsPlayingMusic] = useState(true)
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false)
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false)
 
@@ -92,7 +92,7 @@ const Home = () => {
           />
           </Suspense>
       </Canvas>
-      <div className='absolute bottom-2 left-2'>
+      <div className='absolute bottom-10 left-10'>
         <img 
         className='w-10 h-10 cursor-pointer object-contain'
         src={!isPlayingMusic ? soundoff : soundon} 
