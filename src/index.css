@@ -11,6 +11,7 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+  overscroll-behavior-y: none ;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -165,7 +166,6 @@ body:has(.card[data-color="green"]:hover) {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
 }
 
-/* Neo Brutalism */
 .neo-brutalism-blue {
   background: #2b77e7;
   position: relative;

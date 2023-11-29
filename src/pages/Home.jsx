@@ -43,8 +43,6 @@ const Home = () => {
     const adjustBluebirdForScreenSize = () => {
 
       let screenScale, screenPosition
-      // let rotation = [0.1, 4.7, 0]
-  
   
         if(window.innerWidth < 768) {
           screenScale = [1.5, 1.5, 1.5]

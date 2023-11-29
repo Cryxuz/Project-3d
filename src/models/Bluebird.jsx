@@ -1,9 +1,8 @@
 import { useEffect, useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
 import bluebirdScene from '../assets/3d/bluebird.glb';
 import { useAnimations, useGLTF } from '@react-three/drei';
 
-const Bluebird = ({ isRotating, ...props }) => {
+const Bluebird = ({ ...props }) => {
   const ref = useRef();
   const { scene, animations } = useGLTF(bluebirdScene);
   const { mixer } = useAnimations(animations, ref);
