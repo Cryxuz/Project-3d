@@ -18,7 +18,6 @@ import {
     // projects
     p,
     contract,
-    burger,
     donut,
     pawprint,
     
@@ -186,14 +185,6 @@ export const projects = [
   description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, Node) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
   link: 'https://tailored-tails.onrender.com/',
   github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack'
-},
-{
-  iconUrl: burger,
-  theme: 'btn-back-black',
-  name: 'Burger Dash',
-  description: 'This website is built using SERN (SQLite, Express, React, Node) stack, it is more focused on saving the data to the database, we used carousel on the front-end with react-responsive-carousel and deployed at Netlify.',
-  link: 'https://burgerdash.netlify.app/',
-  github_link: 'https://github.com/Cryxuz/Project-burger-dash'
 },
 {
   iconUrl: donut,
