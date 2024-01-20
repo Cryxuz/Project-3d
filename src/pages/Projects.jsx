@@ -2,8 +2,20 @@ import { Link } from 'react-router-dom'
 import {projects} from '../constants'
 import { arrow } from '../assets/icons'
 import CTA from '../components/CTA'
+import {useState} from 'react'
 
 const Projects = () => {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <section className="max-container">
       
@@ -64,19 +76,22 @@ const Projects = () => {
                 )}
                 {project.vid && (
                 <div className='mt-5 flex items-center gap-2 font-poppins'>
-                  <Link 
-                    to={project.vid}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='font-semibold text-blue-600'
-                    >
-                    Video Demo
-                  </Link>
+                  <button className='font-semibold text-blue-600'onClick={openModal}>Video Demo</button>
                   <img 
                   src={arrow}
                   alt="arrow"
                   className='w-4 h-4 object-contain'
                   />
+                  {isModalOpen && (
+                    <div className='z-10 fixed inset-0 flex items-center justify-center modal-overlay bg-gray-800'>
+                      <div className='modal w-[90%] h-[90%] bg-white p-4 rounded-md pb-[5%]'>
+                        <button className='font-semibold text-blue-600 mb-2' onClick={closeModal}>
+                          Close 
+                        </button>
+                        <iframe src={project.vid} title='Modal Iframe' className='rounded-md w-full h-full' />
+                      </div>
+                    </div>
+                  )}
                 </div>
                 )}
             </div>

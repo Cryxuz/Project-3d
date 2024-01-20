@@ -176,7 +176,8 @@ export const projects = [
   name: "To-do List",
   description: 'A simple To-do list project from dev academy.',
   github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list',
-  vid: 'https://youtu.be/BB0DU4DoPP4?list=RDBB0DU4DoPP4'
+  // vid: 'https://youtu.be/BB0DU4DoPP4?list=RDBB0DU4DoPP4'
+  vid: 'https://www.youtube.com/embed/i_5pt4FbzTk'
 },
 {
   iconUrl: pawprint,
