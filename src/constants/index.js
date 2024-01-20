@@ -168,15 +168,15 @@ export const projects = [
   name: 'Personal Website',
   description: 'Personal 3D website using Three.js, showcasing my projects and providing a brief introduction about me.',
   link: 'https://paul-tan.com/',
-  github_link: 'https://github.com/Cryxuz/Project-3d'
+  github_link: 'https://github.com/Cryxuz/Project-3d',
 },
 {
   iconUrl: contract,
   theme: 'btn-back-pink',
   name: "To-do List",
   description: 'A simple To-do list project from dev academy.',
-  link: 'http://paul-tan-to-do-list.devacademy.nz/',
-  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list'
+  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list',
+  vid: 'https://youtu.be/BB0DU4DoPP4?list=RDBB0DU4DoPP4'
 },
 {
   iconUrl: pawprint,
@@ -191,7 +191,6 @@ export const projects = [
   theme: 'btn-back-blue',
   name: "Tiff's Donuts",
   description: 'Final group project at Dev Academy, this project is more focused on learning how to use Three.js.',
-  link: 'https://tiffs-donuts.devacademy.nz/',
   github_link: 'https://github.com/Cryxuz/Dev-Academy-Final-Project'
 },
 ];

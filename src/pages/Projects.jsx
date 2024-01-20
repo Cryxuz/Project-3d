@@ -45,6 +45,7 @@ const Projects = () => {
                   className='w-4 h-4 object-contain'
                   />
                 </div>
+                {project.link && (
                 <div className='mt-5 flex items-center gap-2 font-poppins'>
                   <Link 
                     to={project.link}
@@ -60,6 +61,24 @@ const Projects = () => {
                   className='w-4 h-4 object-contain'
                   />
                 </div>
+                )}
+                {project.vid && (
+                <div className='mt-5 flex items-center gap-2 font-poppins'>
+                  <Link 
+                    to={project.vid}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='font-semibold text-blue-600'
+                    >
+                    Video Demo
+                  </Link>
+                  <img 
+                  src={arrow}
+                  alt="arrow"
+                  className='w-4 h-4 object-contain'
+                  />
+                </div>
+                )}
             </div>
           </div>
         ))}
