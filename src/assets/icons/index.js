@@ -31,9 +31,11 @@ import soundoff from './soundoff.png'
 import sql from './sql.png'
 import p from './p.png'
 import contract from './contract.png'
+import nest from './nest.png'
 
 export {
     p,
+    nest,
     contract,
     sql,
     burger,

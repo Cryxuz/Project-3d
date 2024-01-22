@@ -83,10 +83,12 @@ const Projects = () => {
                   className='w-4 h-4 object-contain'
                   />
                   {isModalOpen && (
-                    <div className='z-10 fixed inset-0 flex items-center justify-center modal-overlay bg-gray-800'>
-                      <div className='modal w-[90%] h-[90%] bg-white p-4 rounded-md pb-[5%]'>
-                        <button className='font-semibold text-blue-600 mb-2' onClick={closeModal}>
-                          Close 
+                    <div className='z-10 fixed inset-0 flex items-center justify-center modal-overlay bg-slate-900'>
+                      <div className='modal w-[90%] h-[90%] bg-gray-100 p-4 rounded-md pb-[5%]'>
+                        <button className='font-semibold text-slate-900 mb-2' onClick={closeModal}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
                         </button>
                         <iframe src={project.vid} title='Modal Iframe' className='rounded-md w-full h-full' />
                       </div>

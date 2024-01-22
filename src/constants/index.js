@@ -20,7 +20,7 @@ import {
     contract,
     donut,
     pawprint,
-    
+    nest,
    
 
 } from "../assets/icons";
@@ -162,22 +162,22 @@ export const socialLinks = [
 ];
 
 export const projects = [
+// btn-colors: red, green, yellow, blue, orange, pink, black
 {
   iconUrl: p,
-  theme: 'btn-back-green',
+  theme: 'btn-back-blue',
   name: 'Personal Website',
   description: 'Personal 3D website using Three.js, showcasing my projects and providing a brief introduction about me.',
   link: 'https://paul-tan.com/',
   github_link: 'https://github.com/Cryxuz/Project-3d',
 },
 {
-  iconUrl: contract,
+  iconUrl: nest,
   theme: 'btn-back-pink',
-  name: "To-do List",
-  description: 'A simple To-do list project from dev academy.',
-  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list',
-  // vid: 'https://youtu.be/BB0DU4DoPP4?list=RDBB0DU4DoPP4'
-  vid: 'https://www.youtube.com/embed/i_5pt4FbzTk'
+  name: 'Nestify',
+  description: 'Nestify is a booking app built using the MERN stack. I incorporated JWT tokens for authentication, bcrypt for secure password hashing, and cookie-parser for parsing cookies. My primary focus with this project is to gain practice in passing props both from parent to child and vice versa.',
+  github_link: 'https://github.com/Cryxuz/Booking-App',
+  vid: 'https://www.youtube.com/embed/XeflWRLD25s?si=-36IlbIFhMuFh_B7'
 },
 {
   iconUrl: pawprint,
@@ -185,11 +185,20 @@ export const projects = [
   name: 'Tailored Tails',
   description: 'An e-commerce website selling pet costumes, built with the MERN (MongoDB, Express, React, Node) stack  and incorporating Redux and Tailwind CSS. JWT-token for authentication and authorization, bcrypt for hashing the user passwords and Stripe for managing payments.',
   link: 'https://tailored-tails.onrender.com/',
-  github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack'
+  github_link: 'https://github.com/Cryxuz/Project-Tailored-Tails-Fullstack',
+  vid: 'https://www.youtube.com/embed/LC40-hucyt8?si=VVJwtTcZDtxLHlkM'
+},
+{
+  iconUrl: contract,
+  theme: 'btn-back-black',
+  name: "To-do List",
+  description: 'A simple To-do list project using SERN stack (SQLite, Express, React, Node) while studying at dev academy.',
+  github_link: 'https://github.com/Cryxuz/Dev-Academy-to-do-list',
+  vid: 'https://www.youtube.com/embed/s8nTFIESE00?si=bk6limWaUG-cjevQ'
 },
 {
   iconUrl: donut,
-  theme: 'btn-back-blue',
+  theme: 'btn-back-yellow',
   name: "Tiff's Donuts",
   description: 'Final group project at Dev Academy, this project is more focused on learning how to use Three.js.',
   github_link: 'https://github.com/Cryxuz/Dev-Academy-Final-Project'
