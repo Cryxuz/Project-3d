@@ -1,5 +1,6 @@
 import { dev, distinction, kinloch, cruise } from "../assets/images";
 import {
+  // Skills
     css,
     express,
     git,
@@ -14,7 +15,7 @@ import {
     tailwindcss,
     typescript,
     sql,
-    
+    redux,
     // projects
     p,
     contract,
@@ -90,7 +91,12 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    {
+      imageUrl: redux,
+      name: "Redux",
+      type: "Frontend",
+    },
 ];
 
 export const experiences = [

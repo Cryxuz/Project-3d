@@ -32,9 +32,9 @@ const About = () => {
       </div>
       {/* Experience */}
       <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience</h3>
+        <h3 className='subhead-text'>Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>I&apos;ve attended Dev Academy Aotearoa 15-week bootcamp, leveling up my technical and human skills. I&apos;ve also worked in various establishments such as Distinction Hotel, Kinloch Manor & Villas, and Lakeland Queen Cruise. Here&apos;s the rundown:</p>  
+          <p>During my 15-week bootcamp at Dev Academy Aotearoa, I significantly enhanced my technical and human skills, complemented by hands-on experiences at distinguished establishments such as Distinction Hotel, Kinloch Manor & Villas, and Lakeland Queen Cruise, where I refined my culinary expertise and mastered effective time management. Here&apos;s the rundown:</p>  
         </div>
         <div className='mt-12 flex'>
           <VerticalTimeline>
