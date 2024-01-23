@@ -11,7 +11,7 @@ const About = () => {
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>Software Developer based in New Zealand, specializing in hand-on learning & building applications</p>
       </div>
-      <a target='_blank' href="https://drive.google.com/file/d/1OEo6A_qnsnBXhMEEmfmRSCEKaEGcxYOG/view?usp=drive_link" rel="noreferrer"><button className='btn mt-6'>Download CV</button></a>
+      <a target='_blank' href="https://drive.google.com/file/d/1Xfy7kere4XNeWU9rGCz3o3V3jiw4FJzl/view?usp=share_link" rel="noreferrer"><button className='btn mt-6'>Download CV</button></a>
       
       {/* Skills */}
       <div className="py-10 flex flex-col">
