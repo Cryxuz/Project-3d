@@ -23,8 +23,8 @@ const Contact = () => {
     setIsLoading(true)
     setCurrentAnimation('Animation')
     emailjs.send(
-      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      'service_dczlb0h',
+      'template_ct0lsur',
       {
         from_name: form.name,
         to_name: "Paul",
@@ -32,7 +32,7 @@ const Contact = () => {
         to_email: 'paul_tan@outlook.co.nz',
         message: form.message
       },
-      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      '1H56cToN0sf_8O8pm'
     ).then(() => {
       setIsLoading(false)
       showAlert( {show: true, text: 'Message sent successfully', type: 'success'})
