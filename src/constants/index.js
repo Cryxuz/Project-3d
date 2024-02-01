@@ -183,7 +183,7 @@ export const projects = [
   name: 'Nestify',
   description: 'Nestify is a booking app built using the MERN stack. I incorporated JWT tokens for authentication, bcrypt for secure password hashing, and cookie-parser for parsing cookies. My primary focus with this project is to gain practice in passing props both from parent to child and vice versa.',
   github_link: 'https://github.com/Cryxuz/Booking-App',
-  vid: 'https://www.youtube.com/embed/XeflWRLD25s?si=-36IlbIFhMuFh_B7'
+  vid: 'https://www.youtube.com/embed/DH2ZzYO8XrM?si=sSwg45iZS4Pc9AEE'
 },
 {
   iconUrl: pawprint,
