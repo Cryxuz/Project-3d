@@ -119,7 +119,7 @@ export const experiences = [
         company_name: "Distinction",
         icon: distinction,
         iconBg: "#F3E9E2",
-        date: "July 2020 - March 2023",
+        date: "July 2020 - June 2022",
         points: [
             "Collaborating with daily kitchen operations to ensure seamless service.",
             "Developed proficiency in a variety of cooking styles and cuisines.",

@@ -1,4 +1,5 @@
-import { Suspense, useRef, useState } from "react"
+/* eslint-disable react/no-unknown-property */
+import { Suspense, useState } from "react"
 import emailjs from '@emailjs/browser'
 import { Canvas } from "react-three-fiber"
 import Fox from '../models/Fox'
@@ -9,11 +10,11 @@ import { Link } from "react-router-dom"
 import {socialLinks} from '../constants'
 
 const Contact = () => {
-  const formRef = useRef(null)
+  
   const [form, setForm] = useState({name: '', email:'', message: ''})
   const [isLoading, setIsLoading] = useState(false)
   const [currentAnimation, setCurrentAnimation] = useState('Animation')
-  const { alert, showAlert, hideAlert } = useAlert()
+  const { alert, showAlert, } = useAlert()
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
@@ -42,6 +43,7 @@ const Contact = () => {
       setIsLoading(false)
       setCurrentAnimation('idle')
       showAlert( {show: true, text: 'Message sending failed', type: 'danger'})
+      console.log(err)
     })
   }
   const handleFocus = () => {
@@ -60,7 +62,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
         <form 
-        className="w-full flex flex-col gap-7 mt-14"
+        className="w-full flex flex-col gap-7 mt-8"
         onSubmit={handleSubmit}
         >
           <label className="text-black-500 font-semibold" htmlFor="name">
